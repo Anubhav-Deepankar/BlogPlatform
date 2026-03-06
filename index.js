@@ -10,6 +10,10 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
+app.get("/", (req, res) => {
+  res.redirect("/comments");
+});
+
 let comments = [
   { id: uuid(), user: "kartik", text: "this is new comment by kartik bhaiya" },
 

@@ -28,7 +28,20 @@ let comments = [
 // list all the comments
 
 app.get("/comments", (req, res) => {
-  res.render("index", { comments }); //comments ka array pass ho raha ha
+
+  const search = req.query.user;
+
+  if (search) {
+    const filteredComments = comments.filter((comment) =>
+      comment.user.toLowerCase().includes(search.toLowerCase())
+    );
+
+    res.render("index", { comments: filteredComments });
+
+  } else {
+    res.render("index", { comments });
+  }
+
 });
 
 // display a form to add a comment

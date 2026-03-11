@@ -15,13 +15,13 @@ app.get("/", (req, res) => {
 });
 
 let comments = [
-  { id: uuid(), user: "kartik", text: "this is new comment by kartik bhaiya" },
+  { id: uuid(), user: "kartik", text: "Data centers set up by AWS also provide inbuilt features to help software developers." },
 
-  { id: uuid(), user: "Arun", text: " CSK ipl jeetegi" },
+  { id: uuid(), user: "Arun", text: "AI helps in acclerating tasks which earlier required manual intervention." },
   {
     id: uuid(),
     user: "Naman",
-    text: " bhiaya IPL tumhara fixed/ sattebaazi pe work krta hai",
+    text: "Maybe the sensors were giving wrong reading to the control module which caused failure of the instrument.",
   },
 ];
 //-----------------------------------------------------GET---REQUEST--------------------------------------------

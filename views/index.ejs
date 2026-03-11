@@ -51,7 +51,18 @@
   </style>
   <body>
     <h1>Showing All comments</h1>
-
+    <form action="/comments" method="GET" class="d-flex mb-4" style="width:400px;">
+  
+      <input 
+        type="text" 
+        name="user"
+        placeholder="Search by username..."
+        class="form-control me-2"
+      >
+    
+      <button class="btn btn-dark">Search</button>
+    
+    </form>
     <ul>
       <%for(let comment of comments){ %>
 
